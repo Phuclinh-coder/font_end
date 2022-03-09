@@ -4,43 +4,145 @@
     box-sizing: border-box;
 }
 
-html{
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(30,63,122,1) 0%, rgba(0,212,255,1) 100%);
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+#header{
+    height: 48px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
 }
 
-h1{
-    color: #fff;
+.clear{
+    clear: both;
 }
 
-h2{
-    color: bisque;
+#nav , .subnav{   
+    list-style-type: none;
+   
 }
 
-#linkaddress a{
-    color: #fff;
-    text-decoration: none;
+#nav > li{
+    display: inline-block;
+
 }
 
-#textone, .texttwo{
-    color: white;
+#nav li{
+
+    position: relative;
     
 }
 
-.texttwo a{
+#nav > li > a{
     color: #fff;
+    padding: 0 24px;
+    line-height: 48px;
+
+}
+#nav li a{
+    
+   
+    text-decoration: none;
 }
 
-#tableone{
-    background: white;
-    display: inline-block;
+#nav > li:hover > a{
+    color: red;
+    display: block;
+    background-color: #fff;
 }
 
-#data{
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .subnav{
+    display: none; 
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 0 10px #000; 
+}
+
+#nav  .subnav  a{
+    color: red;
+    line-height: 36px;
+    padding: 0 24px;
+    text-align: left;
+}
+
+.subnav li:hover a{
+    color: white;
+    background-color: black;
+    display: block;
+}
+
+#slider{
+    position: relative;
+    padding-top: 50%;
+    background: url('./img/anhlop.png') top center / cover no-repeat;
+}
+
+#slider .text-slider{
+    color: #000;
+    bottom: 40px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+#slider .text-sliderone{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#slider .text-slidertwo{
+    font-size: 16px;
+}
+
+#content{
+   background-color: #000;
+}
+
+#content .content-section{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+}
+
+#content .section-heading{
+    text-align: center;
+    color: blue;
+    font-size: 24px;
+}
+
+#content .section-sub-heading{
+    color: #fff;
+    padding-top: 15px;
     font-style: italic;
+    font-size: 15px;
+    text-align: center;
 }
-#data label {
-    color: #fff;
+
+
+
+#content .member-list{
+    padding-top: 47px ;
+    
+}
+
+#content .member-item{
+    padding-top: 15px;
+    background-color: #fff;
+    width: calc(100%/3);
+    float: left;
+    text-align: center;
+}
+
+#content .member-img{
+    width: 154px;
+    margin-top: 15px;
+    border-radius: 4px;
 }
